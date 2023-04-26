@@ -19,19 +19,43 @@ const plugin = ({ widgets, vehicle, simulator }) => {
         };
     });
 
-    var slider = document.getElementById("myRange");
+    var slider = container.getElementsByClassName("slidecontainer")[0].children[0]
+    console.log("Element getter");
+    console.log("Element: " + slider.innerHTML);
 
-    slider.oninput = function() {
-         listeners[0](this.value);
+    slider.oninput = function() {        
+        console.log("Value: " + this.value)
+    for (const listener of listeners) {
+        listener(this.value);
+        console.log("Write to listener: " + this.value)
+      } 
     }
+
+    let currentSliderValue = "";
 
     simulator(
         "Vehicle.Body.Pdc.Front.Middle.DistanceToObstacle",
-        "set",
+        "subscribe",
         async ({ args }) => {
             listeners[0] = args[0];
         }
     );
+    simulator(
+        "Vehicle.Body.Pdc.Front.Middle.DistanceToObstacle",
+        "get",
+        async ({ args }) => {
+            return args[0];
+        }
+    );
+    simulator(
+        "Vehicle.Body.Pdc.Front.Middle.DistanceToObstacle",
+        "set",
+        async ({ args }) => {
+            return args[0];
+        }
+    );
+   
+
 
     return {};
 };
