@@ -1,6 +1,6 @@
 const plugin = ({ widgets, vehicle, simulator }) => {
     const container = document.createElement("div");
-    container.setAttribute("style", `display:flex; align-items:center; height: 100%; width: 100%;`);
+    container.setAttribute("style", `display:flex; align-items:center; align-content:center; height: 100%; width: 100%;`);
     container.innerHTML = `
     <div class="distance">
         <input type="checkbox" id="distanceIndicator" name="distanceIndicator" value="Too Close!">
