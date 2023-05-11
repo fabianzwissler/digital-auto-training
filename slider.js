@@ -66,7 +66,7 @@ const plugin = ({ widgets, vehicle, simulator }) => {
         };
     });
 
-    var slider = container.getElementsByClassName("slidecontainer")[1].children[0]
+    var slider = container.getElementsByClassName("slidecontainer")[0].children[1]
     console.log("Element: " + slider.innerHTML);
 
     slider.oninput = function() {        
