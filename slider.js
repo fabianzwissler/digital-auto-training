@@ -11,7 +11,7 @@ const plugin = ({ widgets, vehicle, simulator }) => {
     container.innerHTML = `
 		<style>
 		.slidecontainer {
-		  width: 320px;
+		  width: 90%;
 		  display:flex;
 		  justify-content: space-between;
 		  align-items: center;
