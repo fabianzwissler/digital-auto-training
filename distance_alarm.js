@@ -1,4 +1,4 @@
-import SignalWithMedia from "./reusable/SignalWithMedia.js"
+import SignalWithMedia from "https://playground-plugins.netlify.app/reusable/SignalWithMedia.js"
 const plugin = ({ widgets, vehicle, simulator }) => {
     
 	
