@@ -5,6 +5,7 @@ const plugin = ({ widgets, vehicle, simulator }) => {
     <div class="slidecontainer">
         <input type="range" min="0" max="200" value="50" class="slider" id="myRange">
     </div>
+	<div class="distanceToObstacle"><span>0</span> cm bis zum Hindernis.</div>
       `;
 
     let boxGlobal = null;
@@ -20,11 +21,11 @@ const plugin = ({ widgets, vehicle, simulator }) => {
     });
 
     var slider = container.getElementsByClassName("slidecontainer")[0].children[0]
-    console.log("Element getter");
     console.log("Element: " + slider.innerHTML);
 
     slider.oninput = function() {        
         console.log("Value: " + this.value)
+		container.querySelector(".distanceToObstacle span").innerHTML = this.value;
     for (const listener of listeners) {
         listener(this.value);
         console.log("Write to listener: " + this.value)
