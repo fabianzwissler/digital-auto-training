@@ -1,11 +1,21 @@
 const plugin = ({ widgets, vehicle, simulator }) => {
     const container = document.createElement("div");
-    container.setAttribute("style", `display:flex; height: 100%; width: 100%;`);
+    container.setAttribute("style", 
+	    `
+		top:30%;
+		width: 100%;
+		font-family:sans-serif;
+		text-align:center;
+		position: fixed;
+		`);
     container.innerHTML = `
-    <div class="slidecontainer">
+    <div class="centercontainer"
+	<div class="slidecontainer">
         <input type="range" min="0" max="200" value="50" class="slider" id="myRange">
     </div>
-	<div class="distanceToObstacle"><span>0</span> cm bis zum Hindernis.</div>
+	<div class="distanceToObstacle"><span>0</span> cm </div>
+	<div>bis zum Hindernis.</div>
+	</div>
       `;
 
     let boxGlobal = null;
