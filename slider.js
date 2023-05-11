@@ -7,10 +7,6 @@ const plugin = ({ widgets, vehicle, simulator }) => {
 		font-family:sans-serif;
 		text-align:center;
 		position: fixed;
-		
-		.slider {
-		height:25px;
-	}
 		`);
     container.innerHTML = `
 	<div class="slidecontainer">
@@ -18,6 +14,9 @@ const plugin = ({ widgets, vehicle, simulator }) => {
     </div>
 	<div class="distanceToObstacle"><span>0</span> cm </div>
 	<div>bis zum Hindernis.</div>
+	.slider {
+		height:25px;
+	}
       `;
 
     let boxGlobal = null;
