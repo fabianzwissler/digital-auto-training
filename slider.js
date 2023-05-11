@@ -10,7 +10,10 @@ const plugin = ({ widgets, vehicle, simulator }) => {
 		`);
     container.innerHTML = `
 	<div class="slidecontainer" style="
-		height:25px;
+		height:50px;
+		background: url('https://fazwit00.netlify.app/car.png');
+		outline: none;
+		
 	">
         <input type="range" min="0" max="200" value="00" class="slider" id="myRange">
     </div>
