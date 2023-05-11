@@ -9,12 +9,46 @@ const plugin = ({ widgets, vehicle, simulator }) => {
 		position: fixed;
 		`);
     container.innerHTML = `
+		<style>
+		.slidecontainer {
+		  width: 250px;
+		  display:flex;
+		  justify-content: space-between;
+		  align-items: center;
+		  flex-direction: row;
+		  flex-wrap: nowrap;
+		}
+
+		.slider {
+		  -webkit-appearance: none;
+		  width: 100%;
+		  height: 50px;
+		  background: #d3d3d3;
+		  outline: none;
+		  
+		}
+
+		.slider::-webkit-slider-thumb {
+		  -webkit-appearance: none;
+		  appearance: none;
+		  width: 50px;
+		  height: 50px;
+		  border: 0;
+		  background: url('https://fazwit00.netlify.app/car.png');
+		  cursor: pointer;
+		}
+
+		.slider::-moz-range-thumb {
+		  width: 50px;
+		  height: 50px;
+		  border: 0;
+		  background: url('https://fazwit00.netlify.app/car.png');
+		  cursor: pointer;
+		}
+		</style>
 	<div class="slidecontainer">
-        <input type="range" min="0" max="200" value="00" class="slider" id="myRange" style="
-		height:50px;
-		background: url('https://fazwit00.netlify.app/car.png');
-		outline: none;
-		">
+        <img src="https://fazwit00.netlify.app/stone.png" width=50px>
+		<input type="range" min="0" max="200" value="00" class="slider" id="myRange">
     </div>
 	<div class="distanceToObstacle"><span>0</span> cm </div>
 	<div>bis zum Hindernis.</div>
