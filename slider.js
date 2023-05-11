@@ -9,13 +9,12 @@ const plugin = ({ widgets, vehicle, simulator }) => {
 		position: fixed;
 		`);
     container.innerHTML = `
-	<div class="slidecontainer" style="
+	<div class="slidecontainer">
+        <input type="range" min="0" max="200" value="00" class="slider" id="myRange" style="
 		height:50px;
 		background: url('https://fazwit00.netlify.app/car.png');
 		outline: none;
-		
-	">
-        <input type="range" min="0" max="200" value="00" class="slider" id="myRange">
+		">
     </div>
 	<div class="distanceToObstacle"><span>0</span> cm </div>
 	<div>bis zum Hindernis.</div>
