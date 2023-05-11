@@ -29,7 +29,7 @@ const plugin = ({ widgets, vehicle, simulator }) => {
 	
 		if (value)
 		{
-			alarm.setAttribute("src", "seatOn.gif")
+			alarm.setAttribute("src", "seatOn.png")
 		}
 		else
 		{
