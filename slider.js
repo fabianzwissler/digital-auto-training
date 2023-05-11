@@ -9,13 +9,11 @@ const plugin = ({ widgets, vehicle, simulator }) => {
 		position: fixed;
 		`);
     container.innerHTML = `
-    <div class="centercontainer"
 	<div class="slidecontainer">
         <input type="range" min="0" max="200" value="50" class="slider" id="myRange">
     </div>
 	<div class="distanceToObstacle"><span>0</span> cm </div>
 	<div>bis zum Hindernis.</div>
-	</div>
       `;
 
     let boxGlobal = null;
