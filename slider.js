@@ -7,6 +7,10 @@ const plugin = ({ widgets, vehicle, simulator }) => {
 		font-family:sans-serif;
 		text-align:center;
 		position: fixed;
+		
+		.slider {
+		height:25px;
+	}
 		`);
     container.innerHTML = `
 	<div class="slidecontainer">
