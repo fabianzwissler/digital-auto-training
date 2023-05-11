@@ -15,8 +15,6 @@ const plugin = ({ widgets, vehicle, simulator }) => {
 		}, vehicle)
 	)
 
-    }
-
     return {};
 };
 
