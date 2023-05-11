@@ -10,7 +10,7 @@ const plugin = ({ widgets, vehicle, simulator }) => {
 		`);
     container.innerHTML = `
 	<div class="slidecontainer">
-        <input type="range" min="0" max="200" value="50" class="slider" id="myRange">
+        <input type="range" min="0" max="200" value="00" class="slider" id="myRange">
     </div>
 	<div class="distanceToObstacle"><span>0</span> cm </div>
 	<div>bis zum Hindernis.</div>
